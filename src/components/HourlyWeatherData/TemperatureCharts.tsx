@@ -1,10 +1,8 @@
 import {
   Area,
-  AreaChart,
   Bar,
   CartesianGrid,
   ComposedChart,
-  Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
