@@ -5,6 +5,7 @@ import { FetchWeatherOptions } from "./lib/services/weather.model";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WeatherForm, { WeatherFormValues } from "./components/Form";
+import Layout from "./components/Layout";
 
 function App() {
   const [submittedValues, setSubmittedValues] =
@@ -36,17 +37,20 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <main>
-        <h1>App</h1>
-        <WeatherForm onSubmit={onSubmit} />
+    <Layout
+      header={<Header />}
+      main={
+        <>
+          <div className="mt-10">
+            <WeatherForm onSubmit={onSubmit} />
+          </div>
 
-        {isLoading && <p>Loading...</p>}
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-      </main>
-      <Footer />
-    </>
+          {isLoading && <p>Loading...</p>}
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </>
+      }
+      footer={<Footer />}
+    />
   );
 }
 
