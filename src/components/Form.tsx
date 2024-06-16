@@ -34,7 +34,7 @@ export default function WeatherForm({ onSubmit }: Props) {
 
   return (
     <form
-      className=" max-w-screen-sm mx-auto  bg-white shadow-lg rounded-2xl px-5  py-7 grid gap-2 grid-cols-2 lg:grid-cols-3"
+      className=" max-w-screen-md mx-auto  bg-white shadow-lg rounded-2xl px-5 lg:px-10  py-7 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className={classes.inputGroup}>
